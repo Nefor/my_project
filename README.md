@@ -1,27 +1,33 @@
 ## Getting started
 
-To get started with the app, clone the repo and then install the needed gems:
+To get started with the app, clone the repo and deep into folder where you clone it. Next common steps:
 
 ```
-$ bundle
+gem install rails --no-ri --no-rdoc
 ```
-
-Next, migrate the database:
-
 ```
-$ rails db:create db:migrate
+bundle
 ```
-
-Finally, run the test suite to verify that everything is working correctly:
+Make sure, that you have postgresql server running. Configure database.yml file, then:
 
 ```
-$ rails test
+rails db:create db:migrate
 ```
 
-If the test suite passes, you'll be ready to run the app in a local server:
+(!skip this step for now) TODO: test coverage
+
+```
+rails test
+```
+(!skip this step for now) TODO: frontend
+```
+yarn install
+```
+(!skip too)
 ```
 ./bin/webpack-dev-server
 ```
+Finaly run:
 ```
 $ rails server
 ```
