@@ -1,0 +1,31 @@
+%div.container
+  = form_with model: Apartment.new, class: 'form-group' do |form|
+    %div.form-group
+      = form.label :title, 'Title'
+      = form.text_field :title, class: 'form-control', id: 'apartment_title'
+    %div.form-group
+      = form.label :description, 'Description'
+      = form.text_area :description, class: 'form-control', id: 'apartment_description'
+    %div.input-group
+    %div.row
+      %div.col-md-6.mb-3
+        / = form.label :title, 'Title'
+        %label{for: "validationDefault03"}Street
+        %input{type: "text", class: "form-control", id: "validationDefault03",placeholder: "Street"}
+        %div.invalid-feedback Please provide a valid city.
+      %div.col-md-3.mb-3
+        %label{for: "validationDefault04"}Price
+        %input{type: "text", class: "form-control", id: "validationDefault04", placeholder: "Price"}
+        %div.invalid-feedback Please provide a valid state.
+      %div.col-md-3.mb-3
+        %label{for: "validationDefault05"}Currency
+        %input{type: "text", class: "form-control", id: "validationDefault05", placeholder: "Currency"}
+        %div.invalid-feedback Please provide a valid zip.
+      / = form.label :price, 'Price'
+      / %span.input-group-addon ₴
+      / = form.number_field :price, class: 'form-control no-spin'
+      / = form.text_field :currency, class: 'form-control'
+    %div.form-group
+      %div
+      = form.submit 'Save', class: 'btn btn-primary'
+
