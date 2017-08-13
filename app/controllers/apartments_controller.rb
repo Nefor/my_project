@@ -7,7 +7,12 @@ class ApartmentsController < ApplicationController
   end
 
   def create
-    binding.pry
+    @apartment = Apartment.new(apartment_params)
+    if @apartment.save
+      redirect_to apartments_path
+    else
+      render json: {error: @apartment.errors.messages}, status: 400
+    end
   end
 
   private

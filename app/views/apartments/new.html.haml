@@ -8,23 +8,15 @@
       = form.text_area :description, class: 'form-control', id: 'apartment_description'
     %div.input-group
     %div.row
-      %div.col-md-6.mb-3
-        / = form.label :title, 'Title'
-        %label{for: "validationDefault03"}Street
-        %input{type: "text", class: "form-control", id: "validationDefault03",placeholder: "Street"}
-        %div.invalid-feedback Please provide a valid city.
+      %div.col-md-7.mb-3
+        = form.label :location, 'Location'
+        = form.text_field :location, class: 'form-control', id: 'apartment_location',placeholder: 'Location'
       %div.col-md-3.mb-3
-        %label{for: "validationDefault04"}Price
-        %input{type: "text", class: "form-control", id: "validationDefault04", placeholder: "Price"}
-        %div.invalid-feedback Please provide a valid state.
-      %div.col-md-3.mb-3
-        %label{for: "validationDefault05"}Currency
-        %input{type: "text", class: "form-control", id: "validationDefault05", placeholder: "Currency"}
-        %div.invalid-feedback Please provide a valid zip.
-      / = form.label :price, 'Price'
-      / %span.input-group-addon ₴
-      / = form.number_field :price, class: 'form-control no-spin'
-      / = form.text_field :currency, class: 'form-control'
+        = form.label :price, 'Price'
+        = form.number_field :price, class: 'form-control no-spin', id: 'apartment_price', placeholder: 'Price'
+      %div.col-md-2.mb-3
+        = form.label :currency, 'Currency'
+        = form.text_field :currency, class: 'form-control', id: 'apartment_currency', placeholder: 'Currency', value: '₴'
     %div.form-group
       %div
       = form.submit 'Save', class: 'btn btn-primary'
