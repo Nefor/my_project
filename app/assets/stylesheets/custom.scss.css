@@ -5,10 +5,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
-
 section {
   overflow: auto;
 }
@@ -63,16 +59,6 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-  &:hover {
-  color: white;
-  text-decoration: none;
-
-  }
-#logo:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-
 }
 
 /* footer */
@@ -82,22 +68,4 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
-  a {
-  color: gray;
-  &:hover {
-  color: #222;
-  }
-}
- small {
-  float: left;
-}
-
- ul {
-  float: right;
-  list-style: none;
-  li {
-    float: left;
-    margin-left: 10px;
-    }
-  }
 }
